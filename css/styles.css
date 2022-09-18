@@ -23,18 +23,19 @@ img {
     width: 300px;
 }
 a {
-    color: #f3a712;
+    /* color: #f3a712; */
     /* color: rgba(243, 167, 18, 0.9); */
+    color: darkorange;
 }
 a:hover {
     text-decoration: none;
 }
 h1 {
-    font-size: 10rem;
+    font-size: 6rem;
     line-height: 1.2;
 }
 h2 {
-    font-size: 4.5rem;
+    font-size: 3rem;
 }
 h1, h2 {
     font-family: 'Kalam', cursive;
@@ -127,6 +128,7 @@ header {
 ------------------------------------------ */
 footer {
     background: #2d3142;
+    /* background-color: #4f5d75; */
     color: #fdffff;
 }
 .contact-list {
@@ -136,6 +138,34 @@ footer {
 .contact-list a {
     padding: 1.5rem;
     display: inline-block;
+}
+.contact-list li:nth-of-type(2) a, .contact-list li:nth-of-type(3) a {
+    text-decoration: none;
+    cursor:default;
+}
+.contact-list a::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    right: 8px;
+    height: 30px;
+    width: 26px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.contact-list #mail::before {    /* email */
+    background-image: url("../images/links/mail.svg");
+}
+.contact-list #phone::before {    /* phone */
+    background-image: url("../images/links/phone.svg");
+}
+.contact-list #location::before {    /* location */
+    background-image: url("../images/links/location.svg");
+}
+.contact-list #linkedin::before {    /* linkedin*/
+    background-image: url("../images/links/linkedin.png");
+    background-size: 24px 24px;
 }
 
 
@@ -158,13 +188,14 @@ footer {
     }
     .contact-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 749px) {
     h1 {
-        font-size: 7.5rem;
+        font-size: 6rem;
         line-height: 0.9;
         margin-bottom: 2rem;
     }
