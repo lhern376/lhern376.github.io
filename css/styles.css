@@ -1,0 +1,177 @@
+/* Global styles
+------------------------------------------ */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    font-family:  'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+body {
+    color: #2d3142;
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+img {
+    width: 300px;
+}
+a {
+    color: #f3a712;
+    /* color: rgba(243, 167, 18, 0.9); */
+}
+a:hover {
+    text-decoration: none;
+}
+h1 {
+    font-size: 10rem;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 4.5rem;
+}
+h1, h2 {
+    font-family: 'Kalam', cursive;
+    /* font-weight: 400; */
+    margin: 0;
+}
+.content-wrap {
+    max-width: 900px;
+    width: 85%;             /* when the viewport is smaller than the max-width value, the width value will apply */
+    margin: 0 auto;
+    padding: 60px 0;
+}
+h3 {
+    margin-bottom: 0;
+}
+.item-details h3 + p {
+    font-style: italic;
+}
+.item-details h3 ~ p {
+    margin: 0;
+}
+.divider > section {
+    border-bottom: 1px dashed #4f5d75;
+    padding: 2rem 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* Profile 
+------------------------------------------ */
+header {
+    background-color: #4f5d75;
+    color: #fdffff;
+}
+
+
+
+/* Projects 
+------------------------------------------ */
+.projects {
+    background: #fdffff;
+}
+.projects a {
+    color: #4f5d75;
+}
+.projects .btn {            /* only give the button look to links that go to project or case study */
+    color: #fdffff;
+    background: #4f5d75;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.projects .btn:hover {
+    background: rgba(79, 93, 117, 0.9);
+}
+.project-item {
+    display: flow-root;
+}
+.project-item img {
+    margin-bottom: 2rem;
+}
+.project-item h3 {
+    margin-top: 0;
+}
+
+
+/* Work Experience 
+------------------------------------------ */
+.work-experience {
+    background: #e0787f;
+}
+
+
+/* Education 
+------------------------------------------ */
+.education {
+    background-image: url("../images/olia-gozha-unsplash.jpg");
+    background-size: cover;
+    background-position: center left;
+    padding-bottom: 10rem;
+}
+.education p {
+    width: 60%;
+}
+
+/* Contact Info 
+------------------------------------------ */
+footer {
+    background: #2d3142;
+    color: #fdffff;
+}
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+.contact-list a {
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+
+
+/* Responsive 
+------------------------------------------ */
+@media screen and (min-width: 750px) {
+    header, footer {
+        text-align: center;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    h1 {
+        font-size: 7.5rem;
+        line-height: 0.9;
+        margin-bottom: 2rem;
+    }
+    h2 {
+        line-height: 1;
+    }
+    .contact-list a {
+        padding: 0.5rem;
+    }
+}
