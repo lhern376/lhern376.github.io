@@ -164,8 +164,9 @@ footer {
     background-image: url("../images/links/location.svg");
 }
 .contact-list #linkedin::before {    /* linkedin*/
-    background-image: url("../images/links/linkedin.png");
-    background-size: 24px 24px;
+    background-image: url("../images/links/linkedin_logo1.svg");
+    background-size: 36px 36px;
+    background-position: center 0;
 }
 
 
