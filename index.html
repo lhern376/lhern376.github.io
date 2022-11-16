@@ -6,7 +6,7 @@
     <title>Leduan's Profile Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Ubuntu:wght@400;700&display=swap&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -15,7 +15,7 @@
       <header>
         <div class="content-wrap">
           <h1>Leduan Hernandez</h1>
-          <h2>Aspiring Software Developer</h2>
+          <h2>Software Developer</h2>
 
           <!-- <p>Add your profile copy here. Add more paragraphs or links as needed. Here is some dummy text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, diam ut gravida efficitur, risus neque scelerisque erat, ut rhoncus erat odio ac justo. Nunc scelerisque vestibulum augue, sit amet hendrerit ante.</p>
           <p>Add another paragraph if needed.</p> -->
@@ -25,26 +25,31 @@
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
       <section class="projects">
         <div class="content-wrap divider">
-          <h2>Featured Projects</h2>
-          <p>View some of my projects below.</p>
-
-          <!-- Copy the whole <section> block to add more projects. -->
-          <section class="project-item">
-            <img src="images/thumbnail-2.jpg" alt="description of image">
-            <h3>Project Name</h3>
-            <p>Summary or description of the project and/or your role in it.</p>
-            <a class="btn" href="http://35.224.162.199:8080/" target="_blank">View project</a>
-          </section>
-          <!-- End of Project block. -->
-
-          <!-- Copy the whole <section> block to add more projects. -->
+          <div class="card">
+            <h2>Featured Projects</h2>
+            <p>View some of my projects below.</p>
+            <p>The projects are hosted on a GCP cloud instance running Ubuntu. Static pages are hosted using Apache,
+              and Web Apps are implemented using Django and hosted with Apache and mod_wsgi.
+            </p>
+            <!-- Copy the whole <section> block to add more projects. -->
             <section class="project-item">
-              <img src="images/thumbnail-2.jpg" alt="description of image">
-              <h3>Project Name</h3>
-              <p>Summary or description of the project and/or your role in it.</p>
-              <a class="btn" href="http://35.224.162.199:8081/" target="_blank">View project</a>
+              <img src="images/thumbnails/thumbnail_wiki_webapp.png" alt="Image of my Wiki web application">
+              <h3>Wiki Web App</h3>
+              <p>Simple Wiki web app where users can create articles and format them using Markdown syntax.</p>
+              <a class="btn" href="http://34.171.109.67:8083/" target="_blank">View project</a>
             </section>
             <!-- End of Project block. -->
+
+            <!-- Copy the whole <section> block to add more projects. -->
+              <section class="project-item">
+                <img src="images/thumbnails/thumbnail_google_clone.png" alt="Image of Google Search clone">
+                <h3>Google Search Clone</h3>
+                <p>Simple frontend implementation of Google Search.</p>
+                <p>Basic functions include: <strong>Search</strong>, <strong>Image Search</strong>, <strong>Advanced Search</strong>, <strong>Feeling Lucky</strong>.</p>
+                <a class="btn" href="http://34.171.109.67:8080/" target="_blank">View project</a>
+              </section>
+              <!-- End of Project block. -->
+          </div>
         </div>
       </section>
 
@@ -59,9 +64,9 @@
     
           <!-- Copy this whole <section> block to add more schools. -->
           <section>
-            <h3>Florida International University - Miami</h3>
-            <p>Bachelor of Science in Information Technology<br>2020 - 2022</p>
-            <p>Summary or accomplishments.</p>
+            <h3>Florida International University</h3>
+            <p>Bachelor of Science in Information Technology<br>01/2020 - 08/2022</p>
+            <!-- <p>Summary or accomplishments.</p> -->
           </section>
           <!-- End of School block. -->
         </div>
