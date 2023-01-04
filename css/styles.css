@@ -168,6 +168,10 @@ header {
 
 .project-item img {
     margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .project-item h3 {
@@ -260,6 +264,22 @@ footer {
 
 /* Responsive 
 ------------------------------------------ */
+@media screen and (min-width: 769px) {
+    .project-item img {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-item div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media screen and (min-width: 750px) {
 
     header,
@@ -267,11 +287,7 @@ footer {
         text-align: center;
     }
 
-    .project-item img {
-        float: left;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-    }
+
 
     .job-item {
         display: grid;
