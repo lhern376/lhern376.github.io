@@ -25,6 +25,8 @@ html {
   font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   margin: 0;
+
+  --img-width: 30rem;
 }
 
 body {
@@ -43,7 +45,10 @@ main {
 }
 
 img {
-  width: 30rem;
+  /* 4:3 aspect ratio */
+
+  width: var(--img-width);
+  height: calc(var(--img-width) * 3 / 4);
   border: 1px solid #4f5d75;
   border-radius: 2rem;
 }
@@ -96,15 +101,6 @@ h3 {
   margin: 0;
 }
 
-/* .divider .project-item {
-    border-bottom: 1px dashed #4f5d75;
-    padding: 2rem 0;
-}
-
-.divider .project-item:last-of-type {
-    border-bottom: none;
-} */
-
 /* Profile 
 ------------------------------------------ */
 header {
@@ -118,33 +114,49 @@ header {
 
 /* Projects 
 ------------------------------------------ */
+
 .projects {
-  /* background: #fdffff; */
   background: rgba(247, 247, 247);
   margin-top: 3rem;
   margin-bottom: 6rem;
 }
 
 .projects a {
-  color: #4f5d75;
+  color: #567dc1;
 }
 
-.projects .btn {
-  /* only give the button look to links that go to project or case study */
-  color: #fdffff;
-  /* background: #4f5d75; */
-  background: rgba(79, 93, 117, 0.9);
-
+.btn {
   text-decoration: none;
-  padding: 0.8rem;
-  border-radius: 1rem;
-  box-shadow: 1px 1px 1px 2px rgb(79, 93, 117);
+  margin-left: 1.5rem;
+  padding: 0;
+  border-bottom: 1px solid #567dc1;
   display: inline-block;
 }
 
-.projects .btn:hover {
-  /* background: rgba(79, 93, 117, 0.9); */
-  background: #4f5d75;
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+
+  height: 2.5rem;
+  width: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn:hover {
+  border-bottom-color: #fdffff;
+}
+
+.btn.demo::after {
+  background-image: url("../images/links/external_link.svg");
+  top: 1rem;
+  left: 0.8rem;
+}
+
+.btn.repo::after {
+  background-image: url("../images/links/github_link.svg");
+  top: 0.8rem;
+  left: 0.8rem;
 }
 
 .card {
@@ -158,17 +170,16 @@ header {
   /* box-shadow: 0 0 5px 3px #4f5d75; */
 }
 
-.project-item {
-  display: flow-root;
-}
-
-.project-item:before {
+.divider {
   margin: 4rem auto;
-  /* margin-left: auto; */
-  display: block;
-  content: "";
   border-bottom: 1px dashed black;
   width: 100%;
+}
+
+.project-item {
+  /* display: flow-root; */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item img {
@@ -219,6 +230,7 @@ footer {
 .contact-list a {
   padding: 1.5rem;
   display: inline-block;
+  text-underline-offset: 0.3rem;
 }
 
 .contact-list li:nth-of-type(2) a,
@@ -264,8 +276,11 @@ footer {
 /* Responsive 
 ------------------------------------------ */
 @media screen and (min-width: 1060px) {
+  .project-item {
+    flex-direction: row;
+  }
   .project-item img {
-    float: left;
+    /* float: left; */
     margin-right: 2rem;
     margin-bottom: 2rem;
   }
@@ -304,4 +319,16 @@ footer {
   .contact-list a {
     padding: 0.5rem;
   }
+}
+
+/* makes the .card occupy 100% width of container for mobile view without interfering with margin of other sections */
+@media screen and (max-width: 425px) {
+  .projects .content-wrap {
+    width: 100%;
+  }
+}
+
+/* clips image for very small mobile screens */
+.project-item {
+  overflow: hidden;
 }
