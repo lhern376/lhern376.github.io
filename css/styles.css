@@ -35,6 +35,8 @@ body {
   font-size: 1.7rem;
   line-height: 1.5;
 
+  overscroll-behavior-y: none;
+
   /* normalize */
   margin: 0;
   padding: 0;
