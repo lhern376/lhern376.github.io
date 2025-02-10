@@ -102,6 +102,10 @@ h3 {
   margin: 0;
 }
 
+.projects li {
+  list-style-type: circle;
+}
+
 /* Profile 
 ------------------------------------------ */
 header {
@@ -186,8 +190,8 @@ header {
 .project-item img {
   margin-bottom: 2rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .project-item h3 {
@@ -286,6 +290,13 @@ footer {
     margin-bottom: 2rem;
   }
 }
+
+@media screen and (max-width: 1059px) {
+  .project-item img {
+    margin-inline: auto;
+  }
+}
+
 
 @media screen and (min-width: 750px) {
   header,
